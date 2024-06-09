@@ -19,7 +19,10 @@ Route::get('/template', function () {
 
 
 Route::get('/', function () {
-    return view('admin.layouts.wrapper');
+    $data = [
+        'content' => 'admin.index'
+    ];
+    return view('admin.layouts.wrapper', $data);
 });
 
 
@@ -31,9 +34,9 @@ Route::get('/users', function () {
 });
 
 
-Route::get('/post', function () {
+Route::get('/dashboard', function () {
     $data = [
-        'content' => 'admin.post.index'
+        'content' => 'admin.dashboard.index'
     ];
     return view('admin.layouts.wrapper', $data);
 });
