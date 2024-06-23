@@ -38,7 +38,7 @@
 
                         <li class="nav-item">
                             <a href="/users" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                                <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     User
                                 </p>

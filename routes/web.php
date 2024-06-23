@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,18 +21,13 @@ Route::get('/template', function () {
 
 Route::get('/', function () {
     $data = [
-        'content' => 'admin.index'
+        'content' => 'admin.dashboard.index'
     ];
     return view('admin.layouts.wrapper', $data);
 });
 
 
-Route::get('/users', function () {
-    $data = [
-        'content' => 'admin.users.index'
-    ];
-    return view('admin.layouts.wrapper', $data);
-});
+Route::resource('/users', AdminUserController::class);
 
 
 Route::get('/dashboard', function () {
